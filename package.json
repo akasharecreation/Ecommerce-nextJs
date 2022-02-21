@@ -7,9 +7,10 @@
   },
   "dependencies": {
     "@heroicons/react": "^1.0.5",
+    "@reduxjs/toolkit": "^1.7.2",
     "@tailwindcss/line-clamp": "^0.3.1",
     "@types/react-currency-formatter": "^1.1.4",
-    "next": "latest",
+    "next": "10.0.6",
     "next-images": "^1.8.4",
     "react": "^17.0.2",
     "react-currency-formatter": "^1.1.0",
