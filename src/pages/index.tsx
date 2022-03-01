@@ -2,8 +2,9 @@ import Head from "next/head";
 import Header from "../components/Header"
 import Banner from "../components/Banner"
 import ProductFeed from "../components/ProductFeed"
+import { GetServerSideProps } from "next";
 
-export default function Home({ products }) {
+export default function Home({ products }: any) {
   return (
     <div className="bg-gray-100">
       <Head>
@@ -24,7 +25,7 @@ export default function Home({ products }) {
   );
 } 
 
-export async function getServerSideProps(context){
+export const getServerSideProps: GetServerSideProps = async (context) => {
   const products = await fetch("https://fakestoreapi.com/products").then(
     (res) => res.json()
   );

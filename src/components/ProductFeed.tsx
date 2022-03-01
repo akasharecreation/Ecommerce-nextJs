@@ -1,13 +1,27 @@
 import React from 'react'
 import Product from "./Product";
 
-function ProductFeed({ products }) {
+interface IProduct{
+    products: any;
+}
+
+interface IData{
+    id : number; 
+    title: String; 
+    price: number; 
+    description: String; 
+    category: String; 
+    image: any;
+}
+
+ 
+function ProductFeed({ products }:IProduct) {
   return (
     <div className="grid grid-flow-row-dense md:grid-cols-2 lg:grid-cols-3 xl:grid-cols">
      
         {products
         .slice(0, 4)
-        .map(({ id, title, price, description, category, image}) => (
+        .map(({ id, title, price, description, category, image}: IData) => (
         <Product 
             key={id}
             id={id}
@@ -28,7 +42,7 @@ function ProductFeed({ products }) {
         <div className="md:col-span-2">
             {products
             .slice(4, 5)
-            .map(({ id, title, price, description, category, image}) => (
+            .map(({ id, title, price, description, category, image}: IData) => (
                 <Product 
                 key={id} 
                 id={id}
@@ -43,7 +57,7 @@ function ProductFeed({ products }) {
 
         {products
             .slice(5, products.length)
-            .map(({ id, title, price, description, category, image}) => (
+            .map(({ id, title, price, description, category, image}: IData) => (
                 <Product 
                 key={id} 
                 id={id}

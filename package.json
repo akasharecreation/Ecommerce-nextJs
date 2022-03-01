@@ -10,6 +10,7 @@
     "@reduxjs/toolkit": "^1.7.2",
     "@tailwindcss/line-clamp": "^0.3.1",
     "@types/react-currency-formatter": "^1.1.4",
+    "firebase": "^9.6.7",
     "next": "10.0.6",
     "next-images": "^1.8.4",
     "react": "^17.0.2",
